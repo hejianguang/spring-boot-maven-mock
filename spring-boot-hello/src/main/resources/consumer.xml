@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--消费者的配置尽可能的与生产者配置相对应， 不然引起不必要的一些麻烦-->
+    <dubbo:application name="consumer" />
+
+    <dubbo:registry  id="zookeeper" protocol="zookeeper" address="zookeeper://127.0.0.1:2181" />
+    <dubbo:protocol name="dubbo" port="30001" dispather="all" threadpool="cached" threads="5000"/>
+
+
+    <!--TODO接口公用设置-->
+    <dubbo:reference id="peopleService" interface="com.cool.service.PeopleService" />
+    <dubbo:reference id="studentService" interface="com.cool.service.StudentService" />
+</beans>
