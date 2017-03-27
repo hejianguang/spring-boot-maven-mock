@@ -17,7 +17,7 @@ public class TestController {
     @RequestMapping("/")
     @ResponseBody
     String home() {
-        logger.debug("werwrwerewrwrew12321313---------");
+        logger.debug("werwrwerewrwrew12321313---------123131");
         return "Hello World! My name is he123!";
     }
 }
