@@ -36,6 +36,3 @@ gen### Java template
 hs_err_pid*
 
 **target
-
-/.gitignore
-/.idea/vcs.xml
