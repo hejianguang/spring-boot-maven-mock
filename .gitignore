@@ -4,7 +4,8 @@
 
 # IntelliJ project files
 .gitignore
-.idea
+.idea/*
+.idea/vcs.xml
 *.iml
 *.iws
 **.settings
@@ -36,3 +37,5 @@ hs_err_pid*
 
 **target
 
+/.gitignore
+/.idea/vcs.xml
