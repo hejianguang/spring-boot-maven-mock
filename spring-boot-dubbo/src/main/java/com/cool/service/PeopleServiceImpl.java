@@ -10,13 +10,33 @@ import org.slf4j.LoggerFactory;
  */
 public class PeopleServiceImpl  implements PeopleService {
 
-    Logger logger = LoggerFactory.getLogger(PeopleServiceImpl.class);
+    static Logger logger = LoggerFactory.getLogger(PeopleServiceImpl.class);
 
+
+    private int a = 1100;
+    private int b = 1100;
+
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getB() {
+        return b;
+    }
+
+    public void setB(int b) {
+        this.b = b;
+    }
 
     @Override
     public String getName(String name) {
         logger.debug("dfs{}", name);
-        System.out.print("this is my name he");
+        System.out.print("this is my name he" + name);
         return "he provider"+ name;
     }
 }

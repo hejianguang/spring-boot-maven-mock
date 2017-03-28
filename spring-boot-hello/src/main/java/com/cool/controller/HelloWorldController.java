@@ -26,7 +26,7 @@ public class HelloWorldController implements EmbeddedServletContainerCustomizer{
 
     @Autowired
     private PeopleService peopleService;
-    @Autowired@Reference
+    @Autowired
     private StudentService studentService;
     @RequestMapping("/")
     @ResponseBody
